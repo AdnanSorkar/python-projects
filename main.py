@@ -1,12 +1,20 @@
+total_checked = 0
+
 while True:
     password = input("\nEnter a password or 'exit' to quit: ")
     
     if password.lower() == 'exit':
+        print(f"\nYou checked {total_checked} password(s) this season.")
         print()
         break
+    
+    if not password.strip():
+        print("Password cannot be empty.")
+        continue
         
     print()
     score = 0
+    total_checked += 1
 
     if len(password) >= 8:
         score += 1
@@ -23,7 +31,7 @@ while True:
             has_lower = True
         elif char.isdigit():
             has_digit = True
-        elif not char.isalnum():
+        elif not char.isalnum() and not char.isspace():
             has_symbol = True
 
     if has_upper:
@@ -47,10 +55,13 @@ while True:
         print("Use special symbol")
 
     if (0 <= score <= 2):
-        print("\nWeak")
-    elif (3 <= score <= 4):
-        print("\nMedium")
+        strength = "Weak"
+        print(f"\n'{password}' -> {score}/5 ({strength})")
+    elif (2 < score < 5):
+        strength = "Medium"
+        print(f"\n'{password}' -> {score}/5 ({strength})")
     elif (score == 5):
-        print("\nStrong")
+        strength = "Strong"
+        print(f"\n'{password}' -> {score}/5 ({strength})")
 
     print()
