@@ -4,7 +4,16 @@ direction = input("Write robot direction: ").upper()
 
 for char in direction:
     
-    if char == "F" or char == "L" or char == "R":
-        continue
-    else: break
+    if char == "F":
+        move_forward()
+   
+    elif char == "L":
+        turn_left()
+    
+    elif char == "L":
+        turn_right()
+    
+    else:
+        print("You have typed wrong letter.")
+    
     
