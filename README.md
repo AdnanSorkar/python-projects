@@ -4,11 +4,11 @@ A simple Python program that checks how strong a password is. It gives a score f
 
 ## **The 5 Scoring Rules**
 
-1. **Length:** At least 8 characters long.
-2. **Uppercase:** Has at least one capital letter (`A-Z`).
-3. **Lowercase:** Has at least one small letter (`a-z`).
-4. **Digit:** Has at least one number (`0-9`).
-5. **Symbol:** Has at least one special character (like `!`, `@`, `#`, `$`).
+1. Length (at least 8 characters)
+2. Uppercase letter (`A-Z`)
+3. Lowercase letter (`a-z`)
+4. Numeric digit (`0-9`)
+5. Special symbol (excluding spaces)
 
 ## **Scoring**
 
@@ -23,9 +23,17 @@ python main.py
 
 ## **Sample Runs (Fake Passwords Only)**
 
-- Input: `abc` -> **1/5 (Weak)** - *Tip: Make it longer and add capitals, numbers, and symbols.*
-- Input: `Password1` -> **4/5 (Medium)** - *Tip: Add a symbol.*
-- Input: `Dhaka2026!` -> **5/5 (Strong)** - *Great password!*
+Enter a password or 'exit' to quit: f43
+
+Use uppercase letter
+Use special symbol
+
+'f43' -> 2/5 (Weak)
+
+
+Enter a password or 'exit' to quit: exit
+
+You checked 1 password(s) this season.
 
 ## **Safety Note**
 
