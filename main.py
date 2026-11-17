@@ -1,3 +1,10 @@
-name = input("Write robot direction: ")
+from robot import turn_left, turn_right, move_forward
 
-print(f"My name is {name}")
+direction = input("Write robot direction: ").upper()
+
+for char in direction:
+    
+    if char == "F" or char == "L" or char == "R":
+        continue
+    else: break
+    
