@@ -49,4 +49,4 @@ Using temporary boundary variables (x1, y1) to safely validate grid limits befor
 
 ## Next Idea
 
-```Obstacles:``` Add static obstacle coordinates on the 5x5 grid that the robot must detect and avoid, similar to boundary edges.
+`Obstacles:` Add static obstacle coordinates on the 5x5 grid that the robot must detect and avoid, similar to boundary edges.
