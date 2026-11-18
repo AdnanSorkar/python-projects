@@ -1,8 +1,12 @@
-# Test Cases & Results Log — Robot Grid Navigator
+### Test Cases & Results Log — Robot Grid Navigator
+
+This document outlines the test cases, expected behaviors, and verification results for the robot simulator application.
+
+## Test Scenarios
 
 | Test # | Input Command | Expected Outcome | Actual Output | Status |
 | :--- | :--- | :--- | :--- | :--- |
-| **1** | `FFRF` | Ends at `(1, 2)` facing East[cite: 1] | `Moved to (0, 1)`<br>`Moved to (0, 2)`<br>`Moved to (1, 2)`<br>`Final Position: (1, 2); facing East` | Pass |
-| **2** | `FFFFFF` | Ends at `(0, 4)` facing North with 2 edge warnings[cite: 1] | `Moved to (0, 1)` to `(0, 4)`<br>`Warning: Blocked at edge (0, 4); facing North` (x2)<br>`Final Position: (0, 4); facing North` | Pass |
-| **3** | `LLFF` | Ends at `(0, 0)` facing South with 2 edge warnings[cite: 1] | `Warning: Blocked at edge (0, 0); facing South` (x2)<br>`Final Position: (0, 0); facing South` | Pass |
-| **4** | `FXR` | Warns about invalid character `X`, ends at `(0, 1)` facing East[cite: 1] | `Moved to (0, 1)`<br>`Invalid character 'X' entered.`<br>`Final Position: (0, 1); facing East` | Pass |
+| **1** | `FFRF` | Navigates steps, ends at `(1, 2)` facing East | `Moved to (0, 1); facing North`<br>`Moved to (0, 2); facing North`<br>`Moved to (1, 2); facing North`<br>`Moved to (1, 2); facing East`<br>`Final position: (1, 2); facing East` | Pass |
+| **2** | `FFFFFF` | Hits top edge, triggers warnings, prints edge warning count | `Moved to (0, 1) ... (0, 4)`<br>`Warning: Blocked at edge (0, 4); facing North` (x2)<br>`Final position: (0, 4) North, 2 edge warning(s)` | Pass |
+| **3** | `LLFF` | Turns South, hits bottom edge, triggers warnings | `Moved to (0, 0); facing West` / `South`<br>`Warning: Blocked at edge (0, 0); facing South` (x2)<br>`Final position: (0, 0) South, 2 edge warning(s)` | Pass |
+| **4** | `FXR` | Handles invalid character `X` gracefully | `Moved to (0, 1); facing North`<br>`Invalid character 'X' entered.`<br>`Moved to (0, 1); facing East`<br>`Final position: (0, 1); facing East` | Pass |

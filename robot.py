@@ -34,8 +34,8 @@ def move_forward(x, y, heading):
         x1 -= 1
 
     if 0 <= x1 <= 4 and 0 <= y1 <= 4:
-        print(f"Moved to ({x1}, {y1})")
-        return x1, y1
+        print(f"Moved to ({x1}, {y1}); facing {heading}")
+        return x1, y1, False
     else:
         print(f"Warning: Blocked at edge ({x}, {y}); facing {heading}")
-        return x, y
+        return x, y, True
