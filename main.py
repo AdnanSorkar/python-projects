@@ -1,5 +1,9 @@
 from robot import turn_left, turn_right, move_forward
 
+x = 0
+y = 0
+heading = "NORTH"
+
 direction = input("Write robot direction: ").upper().strip()
 
 if not direction:
@@ -7,10 +11,15 @@ if not direction:
 else:
     for char in direction:
         if char == "F":
-            move_forward()
+            x, y, msg = move_forward(x, y, heading)
+            print("\n",msg)
         elif char == "L":
-            turn_left()
+            heading = turn_left(heading)
         elif char == "R":
-            turn_right()
+            heading = turn_right(heading)
         elif not char.isspace():
             print(f"Invalid character '{char}' entered.")
+
+print(f"\nFinal Position: ({x}, {y}) facing {heading}")
+
+print()
