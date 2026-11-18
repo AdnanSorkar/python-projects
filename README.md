@@ -33,11 +33,12 @@ Ensure both main.py and robot.py are in the same folder, then run the program fr
 
 Write robot direction: ffrf
 
-Moved to (0, 1)
-Moved to (0, 2)
-Moved to (1, 2)
+Moved to (0, 1); facing North
+Moved to (0, 2); facing North
+Moved to (0, 2); facing East
+Moved to (1, 2); facing East
 
-Final Position: (1, 2); facing East
+Final position: (1, 2); facing East
 
 ## What I Learned
 
