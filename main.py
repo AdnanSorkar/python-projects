@@ -11,8 +11,7 @@ if not direction:
 else:
     for char in direction:
         if char == "F":
-            x, y, msg = move_forward(x, y, heading)
-            print("\n",msg)
+            x, y = move_forward(x, y, heading)
         elif char == "L":
             heading = turn_left(heading)
         elif char == "R":
@@ -20,6 +19,4 @@ else:
         elif not char.isspace():
             print(f"Invalid character '{char}' entered.")
 
-print(f"\nFinal Position: ({x}, {y}) facing {heading}")
-
-print()
+print(f"Final Position: ({x}, {y}) facing {heading}")
