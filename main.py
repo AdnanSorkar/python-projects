@@ -2,9 +2,11 @@ from robot import turn_left, turn_right, move_forward
 
 x = 0
 y = 0
-heading = "NORTH"
+heading = "North"
+print()
 
 direction = input("Write robot direction: ").upper().strip()
+print()
 
 if not direction:
     print("Direction cannot be empty.")
@@ -19,4 +21,5 @@ else:
         elif not char.isspace():
             print(f"Invalid character '{char}' entered.")
 
-print(f"Final Position: ({x}, {y}) facing {heading}")
+print(f"\nFinal Position: ({x}, {y}); facing {heading}")
+print()
