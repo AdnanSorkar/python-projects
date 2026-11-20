@@ -6,14 +6,13 @@ A command-line Python simulator that navigates a robot across a 5x5 grid using d
 
 The grid ranges from coordinate `(0, 0)` to `(4, 4)`. The robot starts at `(0, 0)` facing `North`:
 
-y
-4 | .  .  .  .  .
-3 | .  .  .  .  .
-2 | .  .  .  .  .
-1 | .  .  .  .  .
-0 | R  .  .  .  .
-  +---------------
-    0  1  2  3  4  x
+| y \ x | 0 | 1 | 2 | 3 | 4 |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| **4** | . | . | . | . | . |
+| **3** | . | . | . | . | . |
+| **2** | . | . | . | . | . |
+| **1** | . | . | . | . | . |
+| **0** | R | . | . | . | . |
 
 
 ## Commands
