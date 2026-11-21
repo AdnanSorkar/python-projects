@@ -1,9 +1,10 @@
-from analyzer import average, stdInfo, lowest, passedStd
+from analyzer import average, stdInfo, stdGrade
 
 stdList = []
 std = 0
-max = stdList[0]
-min = stdList[0]
+sum = 0
+highest = stdList[0]
+lowest = stdList[0]
 passed = 0
 passRate = 1
 
