@@ -1,4 +1,4 @@
-from analyzer import average, maximum, minimum, stdGrade
+from analyzer import average, maximum, minimum, stdGrade, totalPassed
 
 stdList = []
 std = 0
@@ -20,21 +20,29 @@ while True:
         print("Give a number. Try again.")
         continue
 
+    if stdNum < 0 or stdNum > 100:
+        print("Mark must be between 0 and 100. Try again.")
+        continue
+
     stdList.append(stdNum)
     std += 1
 
 if not stdList:
     print("\nNo student marks were entered.")
 else:
-    avg = average(stdList)
-    high = maximum(stdList)
-    low = minimum(stdList)
+    avr = average(stdList)
+    highest = maximum(stdList)
+    lowest = minimum(stdList)
+    passed = totalPassed(stdList)
+    passedPer = round((passed / len(stdList)) * 100, 2)
 
-    print("\nAverage:", round(avg, 2))
-    print("Highest:", high)
-    print("Lowest:", low)
+    print("\nAverage:", avr)
+    print("Highest:", highest)
+    print("Lowest:", lowest)
+    print("Total passed:", passed)
+    print("Passed percentage:", passedPer, "%")
 
-    print("\n--- Final Report ---")
+    print(f"\nFinal Report of {len(stdList)} student(s):")
     for i in range(len(stdList)):
         grade = stdGrade(stdList[i])
         print(f"Student #{i + 1}: {stdList[i]} -> Grade: {grade}")
