@@ -1,15 +1,9 @@
-from analyzer import average, stdInfo, stdGrade
+from analyzer import average, maximum, minimum, stdGrade
 
 stdList = []
 std = 0
-sum = 0
-highest = stdList[0]
-lowest = stdList[0]
-passed = 0
-passRate = 1
 
 while True:
-
     print("Enter students' numbers / type 'exit' : ")
     stdNum = input(f"Enter #{std + 1} student's number: ").strip()
 
@@ -29,6 +23,20 @@ while True:
     stdList.append(stdNum)
     std += 1
 
-print("Collected:", stdList)
+if not stdList:
+    print("\nNo student marks were entered.")
+else:
+    avg = average(stdList)
+    high = maximum(stdList)
+    low = minimum(stdList)
+
+    print("\nAverage:", round(avg, 2))
+    print("Highest:", high)
+    print("Lowest:", low)
+
+    print("\n--- Final Report ---")
+    for i in range(len(stdList)):
+        grade = stdGrade(stdList[i])
+        print(f"Student #{i + 1}: {stdList[i]} -> Grade: {grade}")
 
 print()

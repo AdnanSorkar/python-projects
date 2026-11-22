@@ -14,14 +14,14 @@ def minimum(stdList):
         return None
     return min(stdList)  # 2nd (alternative) method
 
-def stdGrade(mark):
-    if mark >= 80:
+def stdGrade(num):
+    if num >= 80:
         return "A"
-    elif mark >= 70:
+    elif num >= 70:
         return "B"
-    elif mark >= 60:
+    elif num >= 60:
         return "C"
-    elif mark >= 40:
+    elif num >= 40:
         return "D"
     else:
         return "Fail"
