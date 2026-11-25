@@ -4,11 +4,11 @@ A command-line Python program that collects student marks, calculates summary st
 
 ## Grade Scale
 
-A: 80 – 100
-B: 70 – 79.9
-C: 60 – 69.9
-D: 40 – 59.9 (Passing threshold)
-Fail: Below 40
+- A: 80 – 100
+- B: 70 – 79.9
+- C: 60 – 69.9
+- D: 40 – 59.9 (Passing threshold)
+- Fail: Below 40
 
 ## Features
 
