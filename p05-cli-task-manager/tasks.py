@@ -4,8 +4,15 @@ def display_menu():
     
 
 def include_task(tasks):
-    return
-    
+    content = input("Enter a task: ").strip()
+    if not content:
+        print("Empty input. Task not added.")
+    else:
+        tasks.append([content, False])
+        print("Task added.")
+    return tasks
+
+
 def all_tasks(tasks):
     return 
     
