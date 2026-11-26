@@ -6,7 +6,7 @@ def display_menu():
 def include_task(tasks):
     content = input("Enter a task: ").strip()
     if not content:
-        print("Empty input. Task not added.")
+        print("Entered empty input. Task not added.")
     else:
         tasks.append([content, False])
         print("Task added.")
@@ -14,14 +14,21 @@ def include_task(tasks):
 
 
 def all_tasks(tasks):
+    
     return 
     
     
-def comp_tasks(tasks):
+def comp_tasks(tasks, content):
     done = input("Enter task done or not:")
-    
-    return 
+    if not done:
+            tasks.append([content, False])
+    else:
+        tasks.append([content, True])
+        print("Task added.")
+    return tasks
     
     
 def del_tasks(tasks):
+    delete = input("Enter what to delete:")
+    delete.
     return 
