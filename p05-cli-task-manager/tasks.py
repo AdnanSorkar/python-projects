@@ -15,20 +15,24 @@ def include_task(tasks):
 
 def all_tasks(tasks):
     
-    return 
+    return tasks
     
     
 def comp_tasks(tasks, content):
     done = input("Enter task done or not:")
     if not done:
-            tasks.append([content, False])
+        tasks.append([content, False])
     else:
         tasks.append([content, True])
         print("Task added.")
     return tasks
     
     
-def del_tasks(tasks):
+def del_tasks(tasks, content):
     delete = input("Enter what to delete:")
-    delete.
-    return 
+    if not delete:
+        print("Nothing is deleted.")
+    else:    
+        tasks.pop(content)
+    
+    return tasks
