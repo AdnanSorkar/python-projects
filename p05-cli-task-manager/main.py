@@ -19,13 +19,17 @@ while True:
         continue
 
     if menuOpt == 1:
-        include_task(tasks)
+        content = input("Enter a task: ").strip().lower()
+        tasks = include_task(tasks, content)
     elif menuOpt == 2:
-        all_tasks(tasks)
+        tasks = all_tasks(tasks)
     elif menuOpt == 3:
-        comp_tasks(tasks)
+        content = input("Enter task name: ").strip().lower()
+        done = input("Enter task done or not (yes/no): ").strip().lower()
+        tasks = comp_tasks(tasks, content, done)
     elif menuOpt == 4:
-        del_task(tasks)
+        delete = input("Enter the task no. to delete: ").strip()
+        tasks = del_task(tasks, delete)
     elif menuOpt == 5:
         break
     else:
