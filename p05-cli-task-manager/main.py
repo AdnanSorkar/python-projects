@@ -1,4 +1,4 @@
-from tasks import display_menu, include_task, all_tasks, comp_tasks, del_tasks
+from tasks import display_menu, include_task, all_tasks, comp_tasks, del_task
 
 tasks = []
 
@@ -25,7 +25,7 @@ while True:
     elif menuOpt == 3:
         comp_tasks(tasks)
     elif menuOpt == 4:
-        del_tasks(tasks)
+        del_task(tasks)
     elif menuOpt == 5:
         break
     else:
