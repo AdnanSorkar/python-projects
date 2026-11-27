@@ -11,11 +11,13 @@ def include_task(tasks):
         print("Entered empty input. Task not added.")
     else:
         tasks.append([content, False])
-        print("Task added.")
+        print(f"Task ({len(tasks)}) '{content}' is added.")
+    
     return tasks
 
-
 def all_tasks(tasks):
+    
+    
     
     return tasks
     
@@ -34,6 +36,7 @@ def comp_tasks(tasks, content):
                 print(f"{content} is not done.")
             else:
                 print("Invalid input. Type (yes/no).")
+            
             return tasks
     
     print(f"{content} not found.")
@@ -47,16 +50,16 @@ def del_task(tasks):
         return tasks
 
     try:
-        taskNum = int(delete)
+        dltkNum = int(delete)
     except ValueError:
         print("Please enter a valid number.")
         return tasks
 
-    idx = taskNum - 1
+    idx = dltkNum - 1
     if idx < 0 or idx >= len(tasks):
-        print("Task number out of range.")
+        print("Task number is out of range.")
         return tasks
 
-    removed = tasks.pop(idx)
-    print(f"'{removed[0]}' is deleted.")
+    taskDlt = tasks.pop(idx)
+    print(f"Task ({dltkNum}) '{taskDlt[0]}' is deleted.")
     return tasks
