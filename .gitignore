@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.vscode/
+.idea/
+.pytest_cache/
+.env
+.DS_Store
+*.log
+backups/
+output/
+expenses.txt
+contacts.json
+cleaned.txt
+report.txt
+solved.txt
