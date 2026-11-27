@@ -6,6 +6,7 @@ A modular, menu-driven Command-Line Interface (CLI) task manager built in Python
 
 ### Sample Menu
 
+```text
 Menu:
 
 1. Include
@@ -13,6 +14,7 @@ Menu:
 3. Done
 4. Remove
 5. Exit
+```
 
 ---
 
@@ -42,6 +44,7 @@ Menu:
 
 ## Example Session
 
+```text
 Menu:
 
 1. Include
@@ -112,6 +115,7 @@ Menu:
 5. Exit
 
 Select a option: 5
+```
 
 ---
 
